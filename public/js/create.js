@@ -4,23 +4,23 @@ const strengthArray = []
 const characterAttack = [
     {
         type: "Theif",
-        attacks: [{attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}],
+        attacks: [{attack: "backstab"}, {attack: "dagger throw"}],
 
     },
     {
         type: "Knight",
-        attacks: [{attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}],
+        attacks: [{attack: "charge"}, {attack: "slash"}],
 
 
     },
     {
         type: "Archer",
-        attacks: [{attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}],
+        attacks: [{attack: "barrage"}, {attack: "piercing arrow"}],
 
     },
     {
         type: "Wizard",
-        attacks: [{attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}, {attack: "wergerwre"}],
+        attacks: [{attack: "ice storm"}, {attack: "blaze"}],
 
     }
 ]

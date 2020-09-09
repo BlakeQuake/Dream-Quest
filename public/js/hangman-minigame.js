@@ -1,9 +1,14 @@
 var hangmanWords = [
     "knight",
     "wizard",
-    "ranger",
+    "archer",
     "thief",
-    "overlord"
+    "overlord",
+    "sword",
+    "bow",
+    "arrows",
+    "staff",
+    "daggers"
 ]
 
 let answer = ""

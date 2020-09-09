@@ -15,6 +15,7 @@ startGame()
 
  function startGame(){
     $(".currentSpace").each(function(index) { 
+        boardMovement = 0
     $(this).empty()
         if ($(this).data("space") == 0){
         $(this).html('<h1 class="begin" > Youre Here </h1>') 
@@ -39,8 +40,10 @@ function countPlayer() {
 
 
 $(document).on("click", ".type", function(event){
+    if(boardMovement > 0){return}
     const charDetails = event.target.parentElement
     chosenCharacter = charDetails.getAttribute("data-type")
+
 })
 
 function movePlayer(boardMovement){
@@ -54,17 +57,17 @@ function movePlayer(boardMovement){
            
             
             if (chosenCharacter == "Knight"){
-            $(this).html('<h1 class="yo" > Youre Here </h1>')
+            $(this).html('<img src="../Assets/warrior.png" alt="thief" height="100px" width="100px" class="yo"> ')
             
             $(".yo").hide()
             $(".yo").fadeIn(4000)}
             if (chosenCharacter == "Wizard"){
-                $(this).html('<h1 class="yo" > Youre Here </h1>')
+                $(this).html('<img src="../Assets/wizard.png" alt="thief" height="100px" width="100px" class="yo"> ')
                 
                 $(".yo").hide()
                 $(".yo").fadeIn(4000)}
                 if (chosenCharacter == "Archer"){
-                    $(this).html('<h1 class="yo" > Youre Here </h1>')
+                    $(this).html('<img src="../Assets/ranger.png" alt="thief" height="100px" width="100px" class="yo"> ')
                     
                     $(".yo").hide()
                     $(".yo").fadeIn(4000)}
@@ -77,13 +80,13 @@ function movePlayer(boardMovement){
             
           
           }
-        if (boardMovement == 5 || boardMovement == 10 || boardMovement == 4 ) {
-            // alert("Battle With Boss begins ") 
-            window.location.replace("/hangman");
-    }
-        else {
-            console.log("continue")
-         }
+    //     if (boardMovement == 5 || boardMovement == 10 || boardMovement == 4 ) {
+    //         // alert("Battle With Boss begins ") 
+    //         window.location.replace("/hangman");
+    // }
+    //     else {
+    //         console.log("continue")
+    //      }
 
     
     })
