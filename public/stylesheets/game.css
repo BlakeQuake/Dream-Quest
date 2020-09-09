@@ -1,0 +1,17 @@
+.currentSpace{
+    border-style:solid;
+    width:130px;
+    height: 130px;
+    float: left;
+    border-radius:9%;
+    margin:auto;
+}
+.container{
+padding-top:5%;
+    width: 60%;
+align-content: center;
+margin: 0 auto;
+}
+.dice{
+    margin-bottom:10%;
+}
