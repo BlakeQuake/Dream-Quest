@@ -33,7 +33,7 @@ document.getElementById("keyboard").innerHTML = buttonsHTML;
 
 function handleGuess(choosenLetter) {
     guessed.indexOf(choosenLetter) === -1 ? guessed.push(choosenLetter) : null;
-    document.getElementById(choosenLetter).setAttribute('disabled', ture);
+    document.getElementById(choosenLetter).setAttribute('disabled', true);
 
     if (answer.indexOf(choosenLetter) >= 0) {
         guessedWord();
@@ -47,7 +47,7 @@ function handleGuess(choosenLetter) {
 }
 
 function updateHangmanPicture() {
-    document.getElementById('hangmanPic').src = ' ./hangman-images/' + mistakes + ' .png'
+    document.getElementById('hangmanPic').src = ' ./hangman-images/hangman-image-' + mistakes + '.png'
 }
 
 function checkIfGameWon(){
@@ -59,15 +59,15 @@ function checkIfGameWon(){
 function checkIfGameLost(){
     if (mistakes === maxWrong) {
         document.getElementById('wordSpotlight').innerHTML = 'the answer was: ' + answer;
-        document.getElementById('keyboard').innerHTML = 'You Lost!';
+        document.getElementById('keyboard').innerHTML = 'You did not survive!';
     }
 }
 
 function guessedWord() {
-    wordStatus = answer.split('').map(letter => (guessed.indexof(letter) >= 0 ? letter : " _ ")).join('');
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
 
     document.getElementById('wordSpotlight').innerHTML = wordStatus;
-}
+} 
 
 function updateMistakes(){
     document.getElementById('mistakes').innerHTML= mistakes;
