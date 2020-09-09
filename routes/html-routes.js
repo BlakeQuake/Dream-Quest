@@ -26,4 +26,12 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
+
+  app.get("/chooseCharacters", isAuthenticated, function (req, res) {
+    res.sendFile("/Users/oliverbigelow/Dream-Quest/public/charCreate.html");
+});
+
+app.get("/game", isAuthenticated, function (req, res) {
+  res.sendFile("/Users/oliverbigelow/Dream-Quest/public/game.html");
+});
 };
