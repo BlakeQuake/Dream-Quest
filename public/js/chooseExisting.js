@@ -1,11 +1,11 @@
 $('.dropdown').on("click", function(){
+
     $(".charStats").empty()
     $.ajax({
         url: "api/characters/id",
         method: "GET"
     }).then(function(res){
-        console.log(res)
-        console.log(res.length)
+
         for (let i = 0; i < res.length; i++){
             console.log(res[i])
             const div = $("<div>")
@@ -15,6 +15,7 @@ $('.dropdown').on("click", function(){
             const deleteBtn = $("<button>")
             const attack = $("<p>")
             let img;
+
 
             if (res[i].type === "Wizard"){
                  img = $("<img src = '../assets/wizard.png' height = '50px' width = '60px'>")
@@ -33,7 +34,6 @@ $('.dropdown').on("click", function(){
 
             }
 
-            img.attr("style", "margin-bottom: 150px")
 
             div.attr("class", "type")
             div.attr("style", "font-size: 14px")
@@ -46,9 +46,11 @@ $('.dropdown').on("click", function(){
             hitpoints.text("Hitpoints: " + res[i].hitpoints)
             strength.text("Strength: " + res[i].strength)
             div.append( name,attack, hitpoints, strength, deleteBtn)
+            $(".charStats").append(img)
             $(".charStats").append(div)
-            $(".charImg").append(img)
 
         }
     })
 })
+
+
