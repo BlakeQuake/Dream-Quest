@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-    <script src="./js/game.js"></script>
-    <link rel="stylesheet" href="stylesheets/game.css">
-</head>
-<body>
-    
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheets/game.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center">Quest</h1>
+    <div class="container">
+        <h1 id="count"></h1>
+        <button class="start">Start</button>
+        <br>
+        <br>
+        <br>
+        <button class="dice">DICE ROLL</button>
+
+      <div class="row firstRow">
+        <div class="col-md-2 currentSpace" data-space="0"></div>
+        <div class="col-md-2 currentSpace" data-space="1"></div>
+        <div class="col-md-2 currentSpace" data-space="2"></div>
+        <div class="col-md-2 currentSpace" data-space="3"></div>
+        <div class="col-md-2 currentSpace" data-space="4"></div>
+        <div class="col-md-2 currentSpace" data-space="5"></div>
+      </div>
+      <div class="row secondRow">
+        <div class="col-md-2 currentSpace" data-space="6"></div>
+        <div class="col-md-2 currentSpace" data-space="7"></div>
+        <div class="col-md-2 currentSpace" data-space="8"></div>
+        <div class="col-md-2 currentSpace" data-space="9"></div>
+        <div class="col-md-2 currentSpace" data-space="10"></div>
+        <div class="col-md-2 currentSpace" data-space="11"></div>
+      </div>
+      <div class="row thirdRow">
+        <div class="col-md-2 currentSpace" data-space="12"></div>
+        <div class="col-md-2 currentSpace" data-space="13"></div>
+        <div class="col-md-2 currentSpace" data-space="14"></div>
+        <div class="col-md-2 currentSpace" data-space="15"></div>
+        <div class="col-md-2 currentSpace" data-space="16"></div>
+        <div class="col-md-2 currentSpace" data-space="17"></div>
+      </div>
+      <div class="row fourthRow">
+        <div class="col-md-2 currentSpace" data-space="18"></div>
+        <div class="col-md-2 currentSpace" data-space="19"></div>
+        <div class="col-md-2 currentSpace" data-space="20"></div>
+        <div class="col-md-2 currentSpace" data-space="21"></div>
+        <div class="col-md-2 currentSpace" data-space="22"></div>
+        <div class="col-md-2 currentSpace" data-space="23"></div>
+      </div>
+    </div>
+    <script src="js/game.js"></script>
+  </body>
 </html>

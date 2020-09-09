@@ -28,10 +28,16 @@ module.exports = function(app) {
   });
 
   app.get("/chooseCharacters", isAuthenticated, function (req, res) {
-    res.sendFile("/Users/oliverbigelow/Dream-Quest/public/charCreate.html");
+    res.sendFile(path.join(__dirname, "../public/charCreate.html"));
 });
 
 app.get("/game", isAuthenticated, function (req, res) {
-  res.sendFile("/Users/oliverbigelow/Dream-Quest/public/game.html");
+  res.sendFile(path.join(__dirname, "../public/game.html"));
 });
+app.get("/hangman",function (req , res){
+  res.sendFile(path.join(__dirname, "../public/hangman-minigame.html"))
+
+  })
 };
+
+
