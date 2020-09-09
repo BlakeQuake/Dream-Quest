@@ -1,5 +1,5 @@
 var hangmanWords = [
-    "warrior",
+    "knight",
     "wizard",
     "ranger",
     "thief",
