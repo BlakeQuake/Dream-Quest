@@ -29,7 +29,7 @@ $(document).ready(() => {
       password: password
     })
       .then(() => {
-        window.location.replace("/chooseCharacters");
+        window.location.replace("/createCharacters");
         // If there's an error, log the error
       })
       .catch(err => {
