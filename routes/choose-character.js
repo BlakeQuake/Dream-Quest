@@ -13,9 +13,12 @@ router.get("/api/characters", function(req, res){
     })
 })
 
-router.get("/api/characters/:id", function(req, res){
+router.get("/api/characters/id", function(req, res){
     db.Character.findAll({
-        include: [db.User]
+        where: {
+            UserId: req.session.passport.user.id
+        }
+  
     }).then(function(results){
         res.json(results)
     })

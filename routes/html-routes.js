@@ -27,7 +27,7 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/chooseCharacters", isAuthenticated, function (req, res) {
+  app.get("/createCharacters", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/charCreate.html"));
 });
 
