@@ -13,6 +13,14 @@ router.get("/api/characters", function(req, res){
     })
 })
 
+router.get("/api/characters/:id", function(req, res){
+    db.Character.findAll({
+        include: [db.User]
+    }).then(function(results){
+        res.json(results)
+    })
+})
+
 router.post("/api/characters", function (req, res) {
 
         db.Character.create({

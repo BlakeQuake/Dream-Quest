@@ -27,11 +27,17 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/createCharacters", isAuthenticated, function (req, res) {
-    res.sendFile("/Users/oliverbigelow/Dream-Quest/public/charCreate.html");
-  });
+  app.get("/chooseCharacters", isAuthenticated, function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/charCreate.html"));
+});
 
-  app.get("/game", isAuthenticated, function (req, res) {
-    res.sendFile("/Users/oliverbigelow/Dream-Quest/public/game.html");
-  });
+app.get("/game", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/game.html"));
+});
+app.get("/hangman",function (req , res){
+  res.sendFile(path.join(__dirname, "../public/hangman-minigame.html"))
+
+  })
 };
+
+
