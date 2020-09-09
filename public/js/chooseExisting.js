@@ -14,13 +14,32 @@ $('.dropdown').on("click", function(){
             const strength = $("<p>")
             const deleteBtn = $("<button>")
             const attack = $("<p>")
-            // const img = $("<img src = '../../assets/wizard.png' height = '10px' width = '10px'>")
+            let img;
 
-            // if (res[i].type === "Wizard"){
-            // }
+            if (res[i].type === "Wizard"){
+                 img = $("<img src = '../assets/wizard.png' height = '50px' width = '60px'>")
+
+            }
+            else if (res[i].type === "Thief"){
+                 img = $("<img src = '../assets/thief.png' height = '50px' width = '60px'>")
+
+            }
+            else if (res[i].type === "Archer"){
+                 img = $("<img src = '../assets/ranger.png' height = '50px' width = '60px'>")
+
+            }
+            else{
+                 img = $("<img src = '../assets/warrior.png' height = '50px' width = '60px'>")
+
+            }
+
+            img.attr("style", "margin-bottom: 150px")
+
             div.attr("class", "type")
             div.attr("style", "font-size: 14px")
             div.attr("data-type", res[i].type)
+            deleteBtn.attr("class", "deleteBtn")
+            deleteBtn.attr("data-id", res[i].id)
             name.text("Name: " + res[i].name)
             deleteBtn.html("Delete")
             attack.text("Attack: " + res[i].attack)
@@ -28,7 +47,7 @@ $('.dropdown').on("click", function(){
             strength.text("Strength: " + res[i].strength)
             div.append( name,attack, hitpoints, strength, deleteBtn)
             $(".charStats").append(div)
-            // $("charImg").html(img)
+            $(".charImg").append(img)
 
         }
     })
