@@ -1,4 +1,4 @@
-
+$(".myModal").modal('show');
 
 let charInfo = getChar();
 function getChar() {
@@ -114,6 +114,10 @@ function movePlayer(moveInfo) {
 
     })
 }
+
+// const previousPage = document.referrer;
+// const previousPageArray = previousPage.split("/")
+// console.log(previousPageArray[3])
 
 
 
