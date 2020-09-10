@@ -80,13 +80,13 @@ function movePlayer(boardMovement){
             
           
           }
-    //     if (boardMovement == 5 || boardMovement == 10 || boardMovement == 4 ) {
-    //         // alert("Battle With Boss begins ") 
-    //         window.location.replace("/hangman");
-    // }
-    //     else {
-    //         console.log("continue")
-    //      }
+        if (boardMovement == 5 || boardMovement == 10 || boardMovement == 4 ) {
+            // alert("Battle With Boss begins ") 
+            window.location.replace("/hangman");
+    }
+        else {
+            console.log("continue")
+         }
 
     
     })
