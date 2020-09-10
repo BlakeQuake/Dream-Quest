@@ -1,5 +1,3 @@
-
-
 let charInfo = getChar();
 function getChar() {
     return localStorage.getItem("chosenChar") ? JSON.parse(localStorage.getItem("chosenChar")) : { chosenCharacter: "", id: null, boardMovement: 0, complete: false }
