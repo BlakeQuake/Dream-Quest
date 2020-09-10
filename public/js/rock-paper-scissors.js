@@ -1,6 +1,10 @@
 var game = () => {
     var wins = 0;
     var loses = 0;
+    var winner = document.querySelector(".winner");
+    var endGame = document.querySelector(".options");
+
+
 
 //start game
     var startGame = () => {
@@ -38,6 +42,11 @@ var game = () => {
     };
 
     var updateScore = () => {
+        if (wins === 3 || loses === 3) {
+            winner.textContent = "game over"
+            endGame.innerHTML = "<a href='home'>Dream Quest</a>"
+
+        }
         var playerSocre = document.querySelector(".player-score p");
         var computerSocre = document.querySelector(".computer-score p");
         playerSocre.textContent = wins;
@@ -45,7 +54,6 @@ var game = () => {
     }
 
     var compareHands = (playerChoice, computerChoice) => {
-        var winner = document.querySelector(".winner");
         if (playerChoice === computerChoice) {
             winner.textContent = "tie";
             return;
