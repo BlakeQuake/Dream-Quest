@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 $(".myModal").modal('show');
 
->>>>>>> aeadae280630e5993abf3539e23a2c171225f5d8
 let charInfo = getChar();
 function getChar() {
     return localStorage.getItem("chosenChar") ? JSON.parse(localStorage.getItem("chosenChar")) : { chosenCharacter: "", id: null, boardMovement: 0, complete: false }
@@ -10,7 +7,7 @@ function getChar() {
 console.log(charInfo);
 
 function roll() {
-    var num = Math.floor(Math.random() * 5)
+    var num = Math.floor(Math.random() * 5) + 1
     $("#count").text("You Rolled: " + num)
 
     return num
@@ -32,6 +29,7 @@ function startGame() {
     })
 }
 $(".dice").on("click", function () {
+    localStorage.setItem("chosenChar", JSON.stringify({ ...charInfo, complete: false }))
 
     countPlayer()
 
@@ -60,9 +58,11 @@ $(document).on("click", ".type", function (event) {
 })
 
 function movePlayer(moveInfo) {
+
     console.log(moveInfo);
 
     $(".currentSpace").each(function (index) {
+        console.log(index)
 
         $(this).empty()
         if ($(this).data("space") == moveInfo.boardMovement) {
@@ -77,42 +77,39 @@ function movePlayer(moveInfo) {
 
 
         }
-
+        console.log(moveInfo)
         if (!moveInfo.complete) {
-            localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-
-            if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 15) {
-                // alert("Battle With Boss begins ") 
-
+           if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 15) {
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
                 window.location.replace("/hangman");
+
             }
             if (moveInfo.boardMovement == 3 || moveInfo.boardMovement == 6 || moveInfo.boardMovement == 17 || moveInfo.boardMovement == 12) {
-                // alert("Battle With Boss begins ") 
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
                 window.location.replace("/simon");
+
             }
             if (moveInfo.boardMovement == 1 || moveInfo.boardMovement == 4 || moveInfo.boardMovement == 9 || moveInfo.boardMovement == 11 || moveInfo.boardMovement == 18 ) {
-                // alert("Battle With Boss begins ") 
-
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
                 window.location.replace("/riddles");
+
             }
             if (moveInfo.boardMovement == 2 || moveInfo.boardMovement == 7 || moveInfo.boardMovement == 22) {
-                // alert("Battle With Boss begins ") 
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
                 window.location.replace("/rps");
+
             }
             if (moveInfo.boardMovement >= 23) {
-                // alert("Battle With Boss begins ") 
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
                 window.location.replace("/boss");
+
             }
             else {
-                // alert("Battle With Boss begins ") 
-                updateStats(moveInfo.id, true)
+                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
+                changeStats(moveInfo.id, true)
             }
         }
 
-
-        else {
-            console.log("continue")
-        }
 
 
     })

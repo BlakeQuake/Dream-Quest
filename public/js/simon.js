@@ -10,6 +10,10 @@ let noise = true;
 let on = true;
 let win;
 
+const info = JSON.parse(localStorage.getItem("chosenChar"))
+const id = info.id
+console.log(id)
+
 const turnCounter = document.querySelector("#turn");
 const topLeft = document.querySelector("#topleft");
 const topRight = document.querySelector("#topright");
@@ -180,9 +184,12 @@ function check() {
   }
 
   if (good == false) {
-    window.location.href = 'lose';
+    startButton.style = "display: none;"
+    game.style = "display: block;"
     noise = false;
     win = false;
+    changeStats(id, win)
+    console.log(win)
 
   }
 
@@ -204,7 +211,11 @@ function winGame() {
   turnCounter.innerHTML = "WIN!";
   on = false;
   win = true;
+  changeStats(id, win)
+  console.log(win)
+
 }
+
 
 
 
