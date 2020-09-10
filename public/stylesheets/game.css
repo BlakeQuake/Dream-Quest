@@ -6,6 +6,9 @@
     border-radius:9%;
     margin:auto;
 }
+.header{
+    padding-top: 3%;
+}
 .container{
 padding-top:5%;
     width: 60%;
@@ -17,4 +20,32 @@ margin: 0 auto;
 }
 #logout{
     margin-left: 650px;
+}
+.modal-title{
+    margin-left: 23%;
+    
+}
+.myModal{
+    border-radius: 30%;
+}
+.modal-content{
+    background-image: url("../Assets/26e349c269516d0b99ad9f17e9e2e75b.jpg" );
+    background-position: center;
+    background-size: 160%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'MedievalSharp', cursive;
+    font-weight: 100;
+    
+}
+li{
+    font-size:20px;
+}
+#acceptBtn{
+    border-style: outset;
+    font-size: 20px;
+    color: rgb(46, 45, 45);
+
+    
+    
 }

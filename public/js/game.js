@@ -1,4 +1,4 @@
-
+$(".myModal").modal('show');
 
 let boardMovement = 0;
 let playerNum = 0;
