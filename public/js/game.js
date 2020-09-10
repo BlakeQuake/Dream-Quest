@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+$(".myModal").modal('show');
+
+>>>>>>> aeadae280630e5993abf3539e23a2c171225f5d8
 let charInfo = getChar();
 function getChar() {
     return localStorage.getItem("chosenChar") ? JSON.parse(localStorage.getItem("chosenChar")) : { chosenCharacter: "", id: null, boardMovement: 0, complete: false }
@@ -112,6 +117,10 @@ function movePlayer(moveInfo) {
 
     })
 }
+
+// const previousPage = document.referrer;
+// const previousPageArray = previousPage.split("/")
+// console.log(previousPageArray[3])
 
 
 
