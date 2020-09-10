@@ -13,24 +13,24 @@ var game = () => {
             match.classList.add("fadeIn");
         });
     };
-    //play match
+//play match
     var playMatch = () => {
         var options = document.querySelectorAll(".options button");
         var playerHand =document.querySelector(".player-hand");
         var computerHand =document.querySelector(".computer-hand");
-        //computer options
+//computer options
         var computerOptions = ["rock", "paper", "scissors"];
 
         options.forEach(option => {
             option.addEventListener("click", function() {
-                //computer choice
+        //computer choice
                 var computerNumber = Math.floor(Math.random() * 3);
                 var computerChoice = computerOptions[computerNumber];
-                //compare hands
+        //compare hands
                 compareHands(this.textContent, computerChoice);
 
 
-                //update images
+        //update images
                 playerHand.src = `./RockPaperScissors-images/${this.textContent}.jpeg`;
                 computerHand.src = `./RockPaperScissors-images/${computerChoice}.jpeg`;
             });
@@ -96,13 +96,9 @@ var game = () => {
 
 
 
-    //call all inner function
-    startGame();
-    playMatch();
+//call all inner function
+startGame();
+playMatch();
 };
-
-
-
-
 //start the game function
 game();
