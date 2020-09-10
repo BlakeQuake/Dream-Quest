@@ -34,6 +34,12 @@ module.exports = function (app) {
 app.get("/game", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/game.html"));
 });
+app.get("/simon", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/simon.html"));
+});
+app.get("/lose", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/lose.html"));
+});
 app.get("/hangman",function (req , res){
   res.sendFile(path.join(__dirname, "../public/hangman-minigame.html"))
 
