@@ -52,7 +52,7 @@ body {
     margin-bottom: 60px; /* Margin bottom by footer height */
 }
 .footer {
-    padding-top: 0;
+
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -73,6 +73,6 @@ body {
     cursor: pointer;
 }
 .buttons {
-    margin-left: 45%;
+    margin-left: 42.5%;
     color: white !important;
 }

@@ -39,8 +39,8 @@ $("#wizard").on("click", function(event) {
 
 $(".three-d-model").html(threeDWizard)
 choosenCharacterArray.unshift("Wizard")
-hitpointsArray.unshift(25)
-strengthArray.unshift(100)
+hitpointsArray.unshift(100)
+strengthArray.unshift(25)
 console.log(characterAttack[3].attacks)
 
 for (let i = 0; i < characterAttack[3].attacks.length; i++) {
@@ -143,8 +143,8 @@ $("#knight").on("click", function(event) {
 
 $(".three-d-model").html(threeDKnight)
 choosenCharacterArray.unshift("Knight")
-hitpointsArray.unshift(25)
-strengthArray.unshift(100)
+hitpointsArray.unshift(100)
+strengthArray.unshift(25)
 console.log(choosenCharacterArray)
 
 for (let i = 0; i < characterAttack[1].attacks.length; i++) {
