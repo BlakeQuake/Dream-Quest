@@ -11,7 +11,7 @@ function changeStats(id, win) {
                 name: res.name,
                 attack: res.attack,
                 hitpoints: res.hitpoints + 25,
-                strength: res.strength + 5,
+                strength: res.strength + 8,
                 type: res.type
             }
         }
@@ -19,8 +19,8 @@ function changeStats(id, win) {
             character = {
                 name: res.name,
                 attack: res.attack,
-                hitpoints: res.hitpoints - 25,
-                strength: res.strength - 5,
+                hitpoints: res.hitpoints,
+                strength: res.strength,
                 type: res.type
             }
         }

@@ -50,6 +50,7 @@ var riddles = [
 let randomNumber = Math.floor(Math.random() * 17);
 var win = false;
 var riddleInsert = document.getElementById("riddle")
+var back = document.getElementById("back")
 const info = JSON.parse(localStorage.getItem("chosenChar"))
 const id = info.id
 document.getElementById("submit").addEventListener("click", function() {
@@ -60,10 +61,13 @@ document.getElementById("submit").addEventListener("click", function() {
         alertTag.innerHTML = "clever hero!"
         win = true
         changeStats(id, win)
+        back.innerHTML = "<button> <a href='/game'> Dream Quest </a> </button>"
     }else {
         alertTag.innerHTML = "not clever enough!"
         win = false
         changeStats(id, win)
+        back.innerHTML = "<button> <a href='/game'> Dream Quest </a> </button>"
+
 
     }
     // alert(regex.test(answer) ? "Clever Hero!" : "Not clever enough!")

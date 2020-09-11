@@ -72,7 +72,7 @@ $("#thief").on("click", function(event) {
 
 $(".three-d-model").html(threeDThief)
 choosenCharacterArray.unshift("Thief")
-hitpointsArray.unshift(0)
+hitpointsArray.unshift(50)
 strengthArray.unshift(0)
 console.log(choosenCharacterArray)
 
@@ -83,7 +83,7 @@ for (let i = 0; i < characterAttack[0].attacks.length; i++) {
 }
 
 const p = $("<p>")
-p.html("Dificulty: Hard <hr/> Hitpoints: 0 <hr/> Strength: 0 <hr/>")
+p.html("Dificulty: Hard <hr/> Hitpoints: 50 <hr/> Strength: 0 <hr/>")
 $("#ranking").html(p)
 
   
@@ -105,8 +105,8 @@ $("#archer").on("click", function(event) {
 
 $(".three-d-model").html(threeDArcher)
 choosenCharacterArray.unshift("Archer")
-hitpointsArray.unshift(50)
-strengthArray.unshift(150)
+hitpointsArray.unshift(150)
+strengthArray.unshift(50)
 console.log(choosenCharacterArray)
 
 for (let i = 0; i < characterAttack[2].attacks.length; i++) {
@@ -125,7 +125,7 @@ $("#knight").on("click", function(event) {
     event.preventDefault();
     $("#attack").empty()
     const threeDKnight = $(`<div class="sketchfab-embed-wrapper">
-    <iframe title="A 3D model" width="100%" height="640" style="background: transparent;"
+    <iframe title="A 3D model" width="100%" height="480" style="background: transparent;"
         src="https://sketchfab.com/models/e5ab9d2e39f446639cc76d8467ea666f/embed?autostart=1&amp;ui_controls=0&amp;ui_infos=0&amp;ui_inspector=0&amp;ui_stop=0&amp;ui_watermark=0&amp;ui_watermark_link=0"
         frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true"
         webkitallowfullscreen="true"></iframe>

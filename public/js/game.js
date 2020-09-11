@@ -65,32 +65,33 @@ function movePlayer(moveInfo) {
             $(this).html(`<img src="../assets/${moveInfo.chosenCharacter}.png" alt="thief" height="100px" width="100px" class="yo"> `)
 
             $(".yo").hide()
-            $(".yo").fadeIn(4000, function(){
+            $(".yo").fadeIn(2000, function(){
                         if (!moveInfo.complete) {
             localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
 
-           if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 15) {
+           if (moveInfo.boardMovement == 22 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 11 || moveInfo.boardMovement == 19) {
                 window.location.replace("/hangman");
 
             }
-            if (moveInfo.boardMovement == 3 || moveInfo.boardMovement == 6 || moveInfo.boardMovement == 17 || moveInfo.boardMovement == 12) {
+            else if (moveInfo.boardMovement == 2 || moveInfo.boardMovement == 9 || moveInfo.boardMovement == 12 || moveInfo.boardMovement == 18) {
                 window.location.replace("/simon");
 
             }
-            if (moveInfo.boardMovement == 1 || moveInfo.boardMovement == 4 || moveInfo.boardMovement == 9 || moveInfo.boardMovement == 11 || moveInfo.boardMovement == 18 ) {
+            else if (moveInfo.boardMovement == 3 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 6 || moveInfo.boardMovement == 17 || moveInfo.boardMovement == 20 ) {
                 window.location.replace("/riddles");
 
             }
-            if (moveInfo.boardMovement == 2 || moveInfo.boardMovement == 7 || moveInfo.boardMovement == 22) {
+            else if (moveInfo.boardMovement == 4 || moveInfo.boardMovement == 7 || moveInfo.boardMovement == 14) {
                 window.location.replace("/rps");
 
             }
-            if (moveInfo.boardMovement >= 23) {
+            else if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 13 || moveInfo.boardMovement == 15 || moveInfo.boardMovement == 16 || moveInfo.boardMovement == 21 || moveInfo.boardMovement == 1) {
+                alert("Gift! You Have Attained 25 hitpoints and 8 Strength Lad!")
+                changeStats(moveInfo.id, true)
+            }
+            else  {
                 window.location.replace("/boss");
 
-            }
-            else {
-                changeStats(moveInfo.id, true)
             }
         }
             })

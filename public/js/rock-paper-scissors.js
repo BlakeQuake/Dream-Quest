@@ -50,14 +50,14 @@ var game = () => {
             win = true
             changeStats(id, win)
             winner.textContent = "You Win"
-            endGame.innerHTML = "<a href='home'>Dream Quest</a>"
+            endGame.innerHTML = "<a href='/game'>Dream Quest</a>"
 
         }
         else if (loses === 3) {
             win = false
             changeStats(id, win)
             winner.textContent = "You Lost"
-            endGame.innerHTML = "<a href='home'>Dream Quest</a>"
+            endGame.innerHTML = "<a href='/game'>Dream Quest</a>"
 
         }
         var playerSocre = document.querySelector(".player-score p");
