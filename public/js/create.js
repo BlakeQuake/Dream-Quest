@@ -8,18 +8,18 @@ const characterAttack = [
 
     },
     {
-        type: "Knight",
+        type: "knight",
         attacks: [{attack: "charge"}, {attack: "slash"}],
 
 
     },
     {
-        type: "Archer",
+        type: "archer",
         attacks: [{attack: "barrage"}, {attack: "piercing arrow"}],
 
     },
     {
-        type: "Wizard",
+        type: "wizard",
         attacks: [{attack: "ice storm"}, {attack: "blaze"}],
 
     }
@@ -28,17 +28,17 @@ $("#wizard").on("click", function(event) {
     event.preventDefault();
     $("#attack").empty()
 
-    const threeDWizard = $(`<div class="sketchfab-embed-wrapper">
+    const threeDwizard = $(`<div class="sketchfab-embed-wrapper">
     <iframe title="A 3D model" width="100%" height="480" src="https://sketchfab.com/models/7c70966c90f74102825f7dba4871f4c9/embed?autostart=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-        <a href="https://sketchfab.com/3d-models/grumpy-wizard-7c70966c90f74102825f7dba4871f4c9?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Grumpy Wizard</a>
+        <a href="https://sketchfab.com/3d-models/grumpy-wizard-7c70966c90f74102825f7dba4871f4c9?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Grumpy wizard</a>
         by <a href="https://sketchfab.com/SomjadeChunthavorn?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">SomjadeChunthavorn</a>
         on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
     </p>
 </div>`)
 
-$(".three-d-model").html(threeDWizard)
-choosenCharacterArray.unshift("Wizard")
+$(".three-d-model").html(threeDwizard)
+choosenCharacterArray.unshift("wizard")
 hitpointsArray.unshift(100)
 strengthArray.unshift(25)
 console.log(characterAttack[3].attacks)
@@ -61,17 +61,17 @@ $("#thief").on("click", function(event) {
     event.preventDefault();
     $("#attack").empty()
 
-    const threeDThief = $(`<div class="sketchfab-embed-wrapper">
+    const threeDthief = $(`<div class="sketchfab-embed-wrapper">
     <iframe title="A 3D model" width="100%" height="480" src="https://sketchfab.com/models/664f685ef3c742a784a3cafcc1b75d4d/embed?autospin=0.2&amp;autostart=1&amp;preload=1&amp;ui_controls=1&amp;ui_infos=1&amp;ui_inspector=1&amp;ui_stop=1&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-        <a href="https://sketchfab.com/3d-models/card-thief-664f685ef3c742a784a3cafcc1b75d4d?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Card Thief</a>
+        <a href="https://sketchfab.com/3d-models/card-thief-664f685ef3c742a784a3cafcc1b75d4d?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Card thief</a>
         by <a href="https://sketchfab.com/Demmy?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Dan</a>
         on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
     </p>
 </div>`)
 
-$(".three-d-model").html(threeDThief)
-choosenCharacterArray.unshift("Thief")
+$(".three-d-model").html(threeDthief)
+choosenCharacterArray.unshift("thief")
 hitpointsArray.unshift(50)
 strengthArray.unshift(0)
 console.log(choosenCharacterArray)
@@ -94,17 +94,17 @@ $("#archer").on("click", function(event) {
     event.preventDefault();
     $("#attack").empty()
 
-    const threeDArcher = $(`<div class="sketchfab-embed-wrapper">
+    const threeDarcher = $(`<div class="sketchfab-embed-wrapper">
     <iframe title="A 3D model" width="100%" height="480" src="https://sketchfab.com/models/aa116478ab6349848b22fb3d27a72f89/embed?autostart=1&amp;ui_controls=0&amp;ui_infos=0&amp;ui_inspector=0&amp;ui_stop=0&amp;ui_watermark=1&amp;ui_watermark_link=1" frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-        <a href="https://sketchfab.com/3d-models/mini-skeleton-archer-tail-aa116478ab6349848b22fb3d27a72f89?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Mini Skeleton Archer Tail</a>
+        <a href="https://sketchfab.com/3d-models/mini-skeleton-archer-tail-aa116478ab6349848b22fb3d27a72f89?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Mini Skeleton archer Tail</a>
         by <a href="https://sketchfab.com/bitgem?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">BitGem</a>
         on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campaign=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
     </p>
 </div>`)
 
-$(".three-d-model").html(threeDArcher)
-choosenCharacterArray.unshift("Archer")
+$(".three-d-model").html(threeDarcher)
+choosenCharacterArray.unshift("archer")
 hitpointsArray.unshift(150)
 strengthArray.unshift(50)
 console.log(choosenCharacterArray)
@@ -124,7 +124,7 @@ $("#ranking").html(p)
 $("#knight").on("click", function(event) {
     event.preventDefault();
     $("#attack").empty()
-    const threeDKnight = $(`<div class="sketchfab-embed-wrapper">
+    const threeDknight = $(`<div class="sketchfab-embed-wrapper">
     <iframe title="A 3D model" width="100%" height="480" style="background: transparent;"
         src="https://sketchfab.com/models/e5ab9d2e39f446639cc76d8467ea666f/embed?autostart=1&amp;ui_controls=0&amp;ui_infos=0&amp;ui_inspector=0&amp;ui_stop=0&amp;ui_watermark=0&amp;ui_watermark_link=0"
         frameborder="0" allow="autoplay; fullscreen; vr" mozallowfullscreen="true"
@@ -132,7 +132,7 @@ $("#knight").on("click", function(event) {
     <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
         <a href="https://sketchfab.com/3d-models/shadow-catcher-demo-the-cartoon-knight-e5ab9d2e39f446639cc76d8467ea666f?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
             target="_blank" style="font-weight: bold; color: #1CAAD9;">Shadow Catcher Demo: The Cartoon
-            Knight</a>
+            knight</a>
         by <a
             href="https://sketchfab.com/Sketchfab?utm_medium=embed&utm_source=website&utm_campaign=share-popup"
             target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
@@ -141,8 +141,8 @@ $("#knight").on("click", function(event) {
     </p>
 </div>`)
 
-$(".three-d-model").html(threeDKnight)
-choosenCharacterArray.unshift("Knight")
+$(".three-d-model").html(threeDknight)
+choosenCharacterArray.unshift("knight")
 hitpointsArray.unshift(100)
 strengthArray.unshift(25)
 console.log(choosenCharacterArray)

@@ -17,20 +17,20 @@ $('.dropdown').on("click", function(){
             let img;
 
 
-            if (res[i].type === "Wizard"){
-                 img = $("<img src = '../Assets/wizard.png' height = '50px' width = '60px'>")
+            if (res[i].type === "wizard"){
+                 img = $("<img src = '../assets/wizard.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "Thief"){
-                 img = $("<img src = '../Assets/Thief.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "thief"){
+                 img = $("<img src = '../assets/thief.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "Archer"){
-                 img = $("<img src = '../Assets/Archer.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "archer"){
+                 img = $("<img src = '../assets/archer.png' height = '50px' width = '60px'>")
 
             }
             else{
-                 img = $("<img src = '../Assets/Knight.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../assets/knight.png' height = '50px' width = '60px'>")
 
             }
 
