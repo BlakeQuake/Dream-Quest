@@ -1,4 +1,4 @@
-$(".myModal").modal('show');
+
 
 let charInfo = getChar();
 function getChar() {
@@ -18,6 +18,7 @@ $(".start").on("click", function () {
 charInfo.chosenCharacter ? movePlayer(charInfo) : ""
 
 function startGame() {
+    $(".myModal").modal('show');
     $(".currentSpace").each(function (index) {
         charInfo.boardMovement = 0
         $(this).empty()
