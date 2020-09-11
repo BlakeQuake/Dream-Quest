@@ -1,5 +1,4 @@
 
-
 let charInfo = getChar();
 function getChar() {
     return localStorage.getItem("chosenChar") ? JSON.parse(localStorage.getItem("chosenChar")) : { chosenCharacter: "", id: null, boardMovement: 0, complete: false }
@@ -29,20 +28,14 @@ function startGame() {
         }
     })
 }
-$(".dice").on("click", function () {
-    localStorage.setItem("chosenChar", JSON.stringify({ ...charInfo, complete: false }))
+$(".dice").on("click", countPlayer)
 
-    countPlayer()
-
-})
-
-async function countPlayer() {
+function countPlayer() {
     let rolledNum = roll();
-    charInfo = getChar()
+
     charInfo.boardMovement += rolledNum
-    await localStorage.setItem("chosenChar", JSON.stringify({ ...charInfo }))
-    charInfo = getChar()
-    console.log(charInfo);
+    charInfo.complete = false;
+    localStorage.setItem("chosenChar", JSON.stringify(charInfo))
     movePlayer(charInfo)
     // console.log(charInfo.boardMovement)
 }
@@ -55,7 +48,8 @@ $(document).on("click", ".type", function (event) {
     console.log(charDetails);
     const id = $(charDetails).children("button").data("id");
     console.log(chosenCharacter, id);
-    localStorage.setItem("chosenChar", JSON.stringify({ boardMovement: 0, id, chosenCharacter, complete: false }))
+    charInfo = { boardMovement: 0, id, chosenCharacter, complete: false }
+    localStorage.setItem("chosenChar", JSON.stringify(charInfo))
 })
 
 function movePlayer(moveInfo) {
@@ -71,7 +65,35 @@ function movePlayer(moveInfo) {
             $(this).html(`<img src="../assets/${moveInfo.chosenCharacter}.png" alt="thief" height="100px" width="100px" class="yo"> `)
 
             $(".yo").hide()
-            $(".yo").fadeIn(4000)
+            $(".yo").fadeIn(4000, function(){
+                        if (!moveInfo.complete) {
+            localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
+
+           if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 15) {
+                window.location.replace("/hangman");
+
+            }
+            if (moveInfo.boardMovement == 3 || moveInfo.boardMovement == 6 || moveInfo.boardMovement == 17 || moveInfo.boardMovement == 12) {
+                window.location.replace("/simon");
+
+            }
+            if (moveInfo.boardMovement == 1 || moveInfo.boardMovement == 4 || moveInfo.boardMovement == 9 || moveInfo.boardMovement == 11 || moveInfo.boardMovement == 18 ) {
+                window.location.replace("/riddles");
+
+            }
+            if (moveInfo.boardMovement == 2 || moveInfo.boardMovement == 7 || moveInfo.boardMovement == 22) {
+                window.location.replace("/rps");
+
+            }
+            if (moveInfo.boardMovement >= 23) {
+                window.location.replace("/boss");
+
+            }
+            else {
+                changeStats(moveInfo.id, true)
+            }
+        }
+            })
 
 
 
@@ -79,37 +101,7 @@ function movePlayer(moveInfo) {
 
         }
         console.log(moveInfo)
-        if (!moveInfo.complete) {
-           if (moveInfo.boardMovement == 5 || moveInfo.boardMovement == 10 || moveInfo.boardMovement == 8 || moveInfo.boardMovement == 15) {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                window.location.replace("/hangman");
 
-            }
-            if (moveInfo.boardMovement == 3 || moveInfo.boardMovement == 6 || moveInfo.boardMovement == 17 || moveInfo.boardMovement == 12) {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                window.location.replace("/simon");
-
-            }
-            if (moveInfo.boardMovement == 1 || moveInfo.boardMovement == 4 || moveInfo.boardMovement == 9 || moveInfo.boardMovement == 11 || moveInfo.boardMovement == 18 ) {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                window.location.replace("/riddles");
-
-            }
-            if (moveInfo.boardMovement == 2 || moveInfo.boardMovement == 7 || moveInfo.boardMovement == 22) {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                window.location.replace("/rps");
-
-            }
-            if (moveInfo.boardMovement >= 23) {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                window.location.replace("/boss");
-
-            }
-            else {
-                localStorage.setItem("chosenChar", JSON.stringify({ ...moveInfo, complete: true }))
-                changeStats(moveInfo.id, true)
-            }
-        }
 
 
 
