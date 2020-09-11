@@ -22,15 +22,15 @@ $('.dropdown').on("click", function(){
 
             }
             else if (res[i].type === "Thief"){
-                 img = $("<img src = '../assets/thief.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../assets/Thief.png' height = '50px' width = '60px'>")
 
             }
             else if (res[i].type === "Archer"){
-                 img = $("<img src = '../assets/ranger.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../assets/Archer.png' height = '50px' width = '60px'>")
 
             }
             else{
-                 img = $("<img src = '../assets/warrior.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../assets/Knight.png' height = '50px' width = '60px'>")
 
             }
 

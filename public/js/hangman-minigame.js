@@ -11,6 +11,9 @@ var hangmanWords = [
     "daggers"
 ]
 
+const info = JSON.parse(localStorage.getItem("chosenChar"))
+const id = info.id
+let win = false
 let answer = ""
 let maxWrong = 7;
 let mistakes = 0;
@@ -58,6 +61,8 @@ function updateHangmanPicture() {
 function checkIfGameWon(){
     if (wordStatus === answer) {
         document.getElementById('keyboard').innerHTML = 'You Survived!';
+        win = true
+        changeStats(id, win)
     }
 }
 
@@ -65,6 +70,9 @@ function checkIfGameLost(){
     if (mistakes === maxWrong) {
         document.getElementById('wordSpotlight').innerHTML = 'the answer was: ' + answer;
         document.getElementById('keyboard').innerHTML = 'You did not survive!';
+        win = false
+        changeStats(id, win)
+
     }
 }
 

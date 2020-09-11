@@ -1,3 +1,7 @@
+const info = JSON.parse(localStorage.getItem("chosenChar"))
+const id = info.id
+let win = false;
+
 var game = () => {
     var wins = 0;
     var loses = 0;
@@ -42,8 +46,17 @@ var game = () => {
     };
 
     var updateScore = () => {
-        if (wins === 3 || loses === 3) {
-            winner.textContent = "game over"
+        if (wins === 3) {
+            win = true
+            changeStats(id, win)
+            winner.textContent = "You Win"
+            endGame.innerHTML = "<a href='home'>Dream Quest</a>"
+
+        }
+        else if (loses === 3) {
+            win = false
+            changeStats(id, win)
+            winner.textContent = "You Lost"
             endGame.innerHTML = "<a href='home'>Dream Quest</a>"
 
         }
