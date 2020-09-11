@@ -56,3 +56,10 @@ body {
     color: #fff;
     cursor: pointer;
 }
+
+.btn {
+    background-color: gray;
+    border-width: 0;
+    margin-bottom: 15px;
+
+  }
