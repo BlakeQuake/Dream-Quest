@@ -54,6 +54,11 @@ $(document).on("click", ".type", function (event) {
 
 function movePlayer(moveInfo) {
 
+    if (moveInfo.boardMovement >= 23){
+        moveInfo.boardMovement = 23;
+        localStorage.setItem("chosenChar", JSON.stringify(moveInfo))
+    }
+
     console.log(moveInfo);
 
     $(".currentSpace").each(function (index) {
@@ -61,6 +66,7 @@ function movePlayer(moveInfo) {
 
         $(this).empty()
         if ($(this).data("space") == moveInfo.boardMovement) {
+
 
             $(this).html(`<img src="../Assets/${moveInfo.chosenCharacter}.png" alt="thief" height="100px" width="100px" class="yo"> `)
 

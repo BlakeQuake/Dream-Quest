@@ -1,5 +1,6 @@
 const info = JSON.parse(localStorage.getItem("chosenChar"))
 const id = info.id
+const back = document.getElementById("back") 
 function deleteChar(charId) {
     $.ajax({
         url: "/api/characters/" + charId,
@@ -30,9 +31,12 @@ function fightBoss(){
         if (hitpoints <= 0){
             alert("You've been defeated")
             deleteChar(id);
+            back.style = "display: block;"
+            return
         }
         if (bosshp <= 0){
             alert("You have restored peace to the land, Well Done hero!!!")
+            back.style = "display: block;"
             return
         }
         }
