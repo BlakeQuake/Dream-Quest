@@ -18,19 +18,19 @@ $('.dropdown').on("click", function(){
 
 
             if (res[i].type === "Wizard"){
-                 img = $("<img src = '../assets/wizard.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../Assets/wizard.png' height = '50px' width = '60px'>")
 
             }
             else if (res[i].type === "Thief"){
-                 img = $("<img src = '../assets/Thief.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../Assets/Thief.png' height = '50px' width = '60px'>")
 
             }
             else if (res[i].type === "Archer"){
-                 img = $("<img src = '../assets/Archer.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../Assets/Archer.png' height = '50px' width = '60px'>")
 
             }
             else{
-                 img = $("<img src = '../assets/Knight.png' height = '50px' width = '60px'>")
+                 img = $("<img src = '../Assets/Knight.png' height = '50px' width = '60px'>")
 
             }
 

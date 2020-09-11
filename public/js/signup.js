@@ -1,11 +1,11 @@
 $(document).ready(() => {
   // Getting references to our form and input
-  const signUpForm = $("form.signup");
+  const signUpForm = $(".signupbtn");
   const emailInput = $("input#email-input");
   const passwordInput = $("input#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("submit", event => {
+  signUpForm.on("click", event => {
     event.preventDefault();
     const userData = {
       email: emailInput.val().trim(),

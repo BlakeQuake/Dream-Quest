@@ -62,7 +62,7 @@ function movePlayer(moveInfo) {
         $(this).empty()
         if ($(this).data("space") == moveInfo.boardMovement) {
 
-            $(this).html(`<img src="../assets/${moveInfo.chosenCharacter}.png" alt="thief" height="100px" width="100px" class="yo"> `)
+            $(this).html(`<img src="../Assets/${moveInfo.chosenCharacter}.png" alt="thief" height="100px" width="100px" class="yo"> `)
 
             $(".yo").hide()
             $(".yo").fadeIn(2000, function(){
