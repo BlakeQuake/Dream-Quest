@@ -1,3 +1,7 @@
+body{
+    color: rgb(221, 218, 218);
+    font-family: 'MedievalSharp', cursive;
+}
 .currentSpace{
     border-style:solid ;
     width:130px;
@@ -10,13 +14,14 @@
     padding-top: 3%;
 }
 .container{
-padding-top:5%;
     width: 60%;
 align-content: center;
 margin: 0 auto;
 }
 .dice{
+    
     margin-bottom:10%;
+    
 }
 #logout{
     margin-left: 650px;
@@ -25,10 +30,10 @@ margin: 0 auto;
     margin-left: 23%;
     
 }
-.myModal{
+/* .myModal{
     
     
-}
+} */
 .modal-content{
     background-image: url("../Assets/26e349c269516d0b99ad9f17e9e2e75b.jpg" );
     background-position: center;
@@ -48,7 +53,19 @@ li{
     border-style: outset;
     font-size: 20px;
     color: rgb(46, 45, 45);
-
     
     
+}
+#videoBG {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:-1;
+}
+button{
+    border-style: outset;
+    font-size: 20px;
+    color: rgb(46, 45, 45);    
 }

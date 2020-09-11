@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <body>
-
-
+​
+​
 </body>
-
+​
 </html>
   <head>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -24,12 +24,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game</title>
-
+​
     <link rel="stylesheet" href="stylesheets/game.css" />
   </head>
-
+​
   <body>
-    
+    <video id="videoBG" autoplay muted loop>
+      <source src="/Assets/ForrestShort.mp4" type="video/mp4" id="source">
+      </video>
+​
+​
+​
+​
+​
 <div class="modal fade myModal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -60,9 +67,9 @@
     </div>
   </div>
 </div>
-
-
-
+​
+​
+​
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgb(218, 218, 218)">
         <a class="navbar-brand" href="#"><img src="./Assets/DQwide.png" alt="DQLogo" height="60px" width="200px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -95,14 +102,16 @@
             </ul>
         </div>
     </nav>
+    
     <h1 style="text-align: center" class="header">Quest</h1>
     <div class="container">
-        <h1 id="count"></h1>
+       
+        
+      <h1 id="count"></h1>
         <button class="start">Begin</button>
         <br>
         <br>
-        <br>
-        <button class="dice">DICE ROLL</button>
+        <button class="dice">Roll</button>
       
       <div class="row firstRow">
         <div class="col-md-2 currentSpace" data-space="0"></div>
@@ -137,6 +146,7 @@
         <div class="col-md-2 currentSpace" data-space="23"></div>
       </div>
     </div>
+    
     <script src="js/changeStats.js"></script>
     <script src="js/chooseExisting.js"></script>
      <script src="js/delete.js"></script>
@@ -144,4 +154,3 @@
     
   </body>
 </html>
-
