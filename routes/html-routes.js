@@ -40,17 +40,12 @@ app.get("/simon", isAuthenticated, function (req, res) {
 app.get("/rps", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/rock-paper-scissors.html"));
 });
-
-
-
 app.get("/riddles", isAuthenticated, function (req, res) {
-  res.sendFile(path.join(__dirname, "../public/simon.html"));
+  res.sendFile(path.join(__dirname, "../public/riddles.html"));
 });
 app.get("/boss", isAuthenticated, function (req, res) {
-  res.sendFile(path.join(__dirname, "../public/simon.html"));
+  res.sendFile(path.join(__dirname, "../public/boss.html"));
 });
-
-
 app.get("/lose", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/lose.html"));
 });

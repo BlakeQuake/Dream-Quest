@@ -184,6 +184,7 @@ function check() {
   }
 
   if (good == false) {
+    turnCounter.innerHTML = "LOSE!";
     startButton.style = "display: none;"
     game.style = "display: block;"
     noise = false;
