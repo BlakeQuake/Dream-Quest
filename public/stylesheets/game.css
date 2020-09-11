@@ -1,7 +1,10 @@
 body{
-    color: rgb(221, 218, 218);
+    color: lightgray;
     font-family: 'MedievalSharp', cursive;
 }
+.btn {
+    background-color: rgb(185, 184, 184);
+    }
 .currentSpace{
     border-style:solid ;
     width:130px;
