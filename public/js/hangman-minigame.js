@@ -1,8 +1,8 @@
 var hangmanWords = [
-    "knight",
-    "wizard",
-    "archer",
-    "thief",
+    "warrior",
+    "magic",
+    "bowman",
+    "stealer",
     "overlord",
     "sword",
     "bow",
@@ -55,7 +55,7 @@ function handleGuess(choosenLetter) {
 }
 
 function updateHangmanPicture() {
-    document.getElementById('hangmanPic').src = ' ../assets/hangman-images/hangman-image-' + mistakes + '.png'
+    document.getElementById('hangmanPic').src = ' ../images/hangman-images/hangman-image-' + mistakes + '.png'
 }
 
 function checkIfGameWon(){
