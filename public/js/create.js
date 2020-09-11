@@ -105,8 +105,8 @@ $("#archer").on("click", function(event) {
 
 $(".three-d-model").html(threeDArcher)
 choosenCharacterArray.unshift("Archer")
-hitpointsArray.unshift(50)
-strengthArray.unshift(150)
+hitpointsArray.unshift(150)
+strengthArray.unshift(50)
 console.log(choosenCharacterArray)
 
 for (let i = 0; i < characterAttack[2].attacks.length; i++) {
