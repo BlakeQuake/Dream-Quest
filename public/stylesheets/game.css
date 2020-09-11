@@ -1,5 +1,5 @@
 body{
-    color: lightgray;
+    color: white;
     font-family: 'MedievalSharp', cursive;
 }
 .btn {
@@ -33,10 +33,10 @@ margin: 0 auto;
     margin-left: 23%;
     
 }
-/* .myModal{
+.modal-body{
     
-    
-} */
+    color: black;
+}
 .modal-content{
     background-image: url("../images/26e349c269516d0b99ad9f17e9e2e75b.jpg" );
     background-position: center;
