@@ -6,7 +6,7 @@ function deleteChar(charId) {
         url: "/api/characters/" + charId,
         method: "DELETE"
     }).then(function (res) {
-        alert(res)
+        console.log(res)
     })
 }
 function fightBoss() {
