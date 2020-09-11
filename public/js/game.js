@@ -98,6 +98,8 @@ function movePlayer(moveInfo) {
             else  {
                 window.location.replace("/boss");
 
+
+
             }
         }
             })
