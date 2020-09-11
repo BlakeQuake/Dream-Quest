@@ -1,36 +1,36 @@
 var riddles = [
     
-    {question: "im tall when im young, im short when im old, what am i?",
+    {question: "I'm tall when I'm young, I'm short when I'm old, what am I?",
     answer: "candle"},
 
-    {question: "i have laskes with no water, mountains with no stones and cities with no buildings, what am i?",
+    {question: "I have lakes with no water, mountains with no stones, and cities with no buildings, what am I?",
     answer: "map"},
     
-    {question: "i am always hungray and will die if not fed, but wjatever i touch i will turn red, what am i?",
+    {question: "I am always hungry and will die if not fed, but whatever I touch I will turn red, what am I?",
     answer: "fire"},
 
-    {question: "what goes throuh cites and fields bu never moves?",
+    {question: "what goes throuh cites and fields but never moves?",
     answer: "roads"},
 
-    {question: "if you drop me im sure to crack but give me a smile and ill smile back, what am i?",
+    {question: "if you drop me I'm sure to crack but give me a smile and i'll smile back, what am I?",
     answer: "mirror"},
 
     {question: "what fills a room but takes up no space?",
     answer: "light"},
 
-    {question: "i follow you all the time and copy your evry move, but you cant touchme or catch me, what am i?",
+    {question: "I follow you all the time and copy your every move, but you can't touch me or catch me, what am I?",
     answer: "shodow"},
 
-    {question: "the more there is the less you see, what am i?",
+    {question: "the more there is the less you see, what am I?",
     answer: "darkness"},
 
     {question: "what is so fragile that saying its name breaks it?",
     answer: "silence"},
 
-    {question: "what can you break, even if you never pick it up or touch it, what am i?",
+    {question: "what can you break, even if you never pick it up or touch it, what am I?",
     answer: "promise"},
 
-    {question: " I shave every day, but my beard stays the same. What am i?",
+    {question: " I shave every day, but my beard stays the same. What am I?",
     answer: "barber"},
 
     {question: "What does man love more than life, hate more than death or mortal strife; that which contented men desire; the poor have, the rich require; the miser spends, the spendthrift saves, and all men carry to their graves?",
@@ -39,7 +39,7 @@ var riddles = [
     {question: "what has roots nobody sees, is taller than trees, up up up it goes and never grows?",
     answer: "mountain"},
 
-    {question: "30 whits horses on a red hill, first they tramp, then they stamp, then they stand still?",
+    {question: "30 white horses on a red hill, first they tramp, then they stamp, then they stand still?",
     answer: " teeth"},
 
     {question: "a box without hinges, key or lid yet golden treasuer inside is hid?",
