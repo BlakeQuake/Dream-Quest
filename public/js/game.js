@@ -7,7 +7,7 @@ function getChar() {
 console.log(charInfo);
 
 function roll() {
-    var num = Math.floor(Math.random() * 5)
+    var num = Math.floor(Math.random() * 5 + 1)
     $("#count").text("You Rolled: " + num)
 
     return num
@@ -114,10 +114,44 @@ function movePlayer(moveInfo) {
 
     })
 }
+function fightBoss(){
+const info = JSON.parse(localStorage.getItem("chosenChar"))
+const id = info.id
+    $.ajax({
+        url: "/api/characters/" + id,
+        method: "GET"
+    }).then(function (res) {
+        console.log(res)
+    
+        //attackboss(res)
+    })
 
-// const previousPage = document.referrer;
-// const previousPageArray = previousPage.split("/")
-// console.log(previousPageArray[3])
+
+
+
+
+
+}
+attackboss({hp: 10000, strength:50})
+
+function attackboss(stats){
+    let {hp,strength} = stats;
+    let bosshp = 2000;
+    let bossStr = 20
+    function attack(){
+        console.log(`you attacked boss for ${strength} damage!`);
+        hp -= 20;
+        setTimeout(()=> console.log(`Boss attacked you for 20 damage! You have ${hp} health left!`), 500)
+    
+    }
+
+    const attackBtn = document.createElement("button");
+    attackBtn.innerHTML = "ATTACK";
+    attackBtn.addEventListener("click", attack)
+    document.getElementById("count").appendChild(attackBtn);
+
+}
+
 
 
 
