@@ -37,6 +37,20 @@ app.get("/game", isAuthenticated, function (req, res) {
 app.get("/simon", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/simon.html"));
 });
+app.get("/rps", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/rock-paper-scissors.html"));
+});
+
+
+
+app.get("/riddles", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/simon.html"));
+});
+app.get("/boss", isAuthenticated, function (req, res) {
+  res.sendFile(path.join(__dirname, "../public/simon.html"));
+});
+
+
 app.get("/lose", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/lose.html"));
 });
