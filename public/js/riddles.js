@@ -40,7 +40,7 @@ var riddles = [
     answer: "mountain"},
 
     {question: "30 white horses on a red hill, first they tramp, then they stamp, then they stand still?",
-    answer: " teeth"},
+    answer: "teeth"},
 
     {question: "a box without hinges, key or lid yet golden treasuer inside is hid?",
     answer: "egg"},
@@ -53,16 +53,19 @@ var riddleInsert = document.getElementById("riddle")
 var back = document.getElementById("back")
 const info = JSON.parse(localStorage.getItem("chosenChar"))
 const id = info.id
+const field = document.getElementById("answerField")
 document.getElementById("submit").addEventListener("click", function() {
     var alertTag = document.getElementById("alert")
     var answer = document.getElementById("answer").value
     const regex = new RegExp(riddles[randomNumber].answer, "gi");
     if (regex.test(answer)) {
+        field.style = "display: none;"
         alertTag.innerHTML = "clever hero!"
         win = true
         changeStats(id, win)
         back.innerHTML = "<button> <a href='/game'> Dream Quest </a> </button>"
     }else {
+        field.style = "display: none;"
         alertTag.innerHTML = "not clever enough!"
         win = false
         changeStats(id, win)
