@@ -35,6 +35,9 @@ app.get("/game", isAuthenticated, function (req, res) {
   res.sendFile(path.join(__dirname, "../public/game.html"));
 });
 app.get("/", function (req, res) {
+  if (req.user) {
+    res.redirect("/game");
+  }
   res.sendFile(path.join(__dirname, "../public/home.html"));
 });
 app.get("/simon", isAuthenticated, function (req, res) {
