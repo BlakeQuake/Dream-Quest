@@ -24,6 +24,7 @@ function attackboss(stats) {
     let bosshp = 200;
     let bossStr = 50
     function attack() {
+        if (hitpoints > 0 && bosshp > 0)
         alert(`you attacked boss for ${strength} damage!`);
         bosshp -= strength
         hitpoints -= 50;

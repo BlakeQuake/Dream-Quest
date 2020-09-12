@@ -1,8 +1,8 @@
 var hangmanWords = [
-    "warrior",
-    "magic",
-    "bowman",
-    "stealer",
+    "knight",
+    "wizard",
+    "archer",
+    "thief",
     "overlord",
     "sword",
     "bow",
