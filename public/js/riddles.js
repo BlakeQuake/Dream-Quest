@@ -9,7 +9,7 @@ var riddles = [
     {question: "I am always hungry and will die if not fed, but whatever I touch I will turn red, what am I?",
     answer: "fire"},
 
-    {question: "what goes throuh cites and fields but never moves?",
+    {question: "what goes through cites and fields but never moves?",
     answer: "roads"},
 
     {question: "if you drop me I'm sure to crack but give me a smile and i'll smile back, what am I?",
@@ -47,7 +47,7 @@ var riddles = [
 
 ]
 
-let randomNumber = Math.floor(Math.random() * 15) - 1;
+let randomNumber = Math.floor(Math.random() * 15) + 1;
 var win = false;
 var riddleInsert = document.getElementById("riddle")
 var back = document.getElementById("back")
