@@ -10,6 +10,10 @@
 * {
     color: lightgray;
 }
+body{
+    color: white;
+    font-family: 'MedievalSharp', cursive;
+}
 
 .btn {
 background-color: rgb(185, 184, 184);
