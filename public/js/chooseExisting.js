@@ -45,8 +45,8 @@ $('.dropdown').on("click", function(){
             attack.text("Attack: " + res[i].attack)
             hitpoints.text("Hitpoints: " + res[i].hitpoints)
             strength.text("Strength: " + res[i].strength)
-            div.append( name,attack, hitpoints, strength, deleteBtn)
-            $(".charStats").append(img)
+            div.append(img, name,attack, hitpoints, strength, deleteBtn)
+            // $(".charStats").append(img)
             $(".charStats").append(div)
 
         }
