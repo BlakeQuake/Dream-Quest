@@ -49,6 +49,12 @@ margin: 0 auto;
     
     
 }
+.charStats {
+    cursor: pointer;
+}
+.type:hover {
+    background-color: lightgray;
+}
 li{
     font-size:20px;
 }
