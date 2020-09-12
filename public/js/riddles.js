@@ -19,7 +19,7 @@ var riddles = [
     answer: "light"},
 
     {question: "I follow you all the time and copy your every move, but you can't touch me or catch me, what am I?",
-    answer: "shodow"},
+    answer: "shadow"},
 
     {question: "the more there is the less you see, what am I?",
     answer: "darkness"},
