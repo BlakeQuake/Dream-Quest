@@ -47,7 +47,7 @@ var riddles = [
 
 ]
 
-let randomNumber = Math.floor(Math.random() * 15) + 1;
+let randomNumber = Math.floor(Math.random() * 14);
 var win = false;
 var riddleInsert = document.getElementById("riddle")
 var back = document.getElementById("back")
