@@ -95,7 +95,10 @@ function movePlayer(moveInfo) {
                 alert("Gift! You Have Attained 25 hitpoints and 8 Strength Lad!")
                 changeStats(moveInfo.id, true)
             }
-            else  {
+            else if (moveInfo.boardMovement == 0) {
+                console.log("hellow")
+            }
+            else {
                 window.location.replace("/boss");
 
 
@@ -116,10 +119,6 @@ function movePlayer(moveInfo) {
 
     })
 }
-
-// const previousPage = document.referrer;
-// const previousPageArray = previousPage.split("/")
-// console.log(previousPageArray[3])
 
 
 
