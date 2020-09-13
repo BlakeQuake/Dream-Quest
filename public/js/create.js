@@ -229,6 +229,7 @@ lastName.on("click", function (event) {
 createBtn.on("click", function (event) {
     event.preventDefault();
     window.location.replace("/game");
+    
 
     // Make a newChirp object
     var character = {

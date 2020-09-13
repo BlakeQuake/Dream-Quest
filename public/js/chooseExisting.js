@@ -1,4 +1,6 @@
-$('.dropdown').on("click", function(){
+$('.play').on("click", function(){
+    $("#choosePath").attr("style", "display: none")
+    $("#charCol").attr("style", "display: block;")
 
     $(".charStats").empty()
     $.ajax({
@@ -8,12 +10,13 @@ $('.dropdown').on("click", function(){
 
         for (let i = 0; i < res.length; i++){
             console.log(res[i])
-            const div = $("<div>")
-            const name = $("<p>")
-            const hitpoints = $("<p>")
-            const strength = $("<p>")
+            const tr = $("<tr>")
+            const name = $("<td>")
+            const hitpoints = $("<td>")
+            const strength = $("<td>")
             const deleteBtn = $("<button>")
-            const attack = $("<p>")
+            const selectBtn = $("<button>")
+            const attack = $("<td>")
             let img;
 
 
@@ -35,22 +38,32 @@ $('.dropdown').on("click", function(){
             }
 
 
-            div.attr("class", "type")
-            div.attr("style", "font-size: 14px")
-            div.attr("data-type", res[i].type)
+            tr.attr("class", `type`)
+            tr.attr("id", `type${i}`)
+            tr.attr("style", "font-size: 14px")
+            tr.attr("data-type", res[i].type)
+            
             deleteBtn.attr("class", "deleteBtn")
             deleteBtn.attr("data-id", res[i].id)
-            name.text("Name: " + res[i].name)
+            deleteBtn.attr("style", "background-color: red;")
             deleteBtn.html("Delete")
+
+            selectBtn.attr("class", "selectBtn")
+            selectBtn.attr("data-id", res[i].id)
+            selectBtn.attr("style", "background-color: green;")
+            selectBtn.html("Select")
+
+            name.text("Name: " + res[i].name)
             attack.text("Attack: " + res[i].attack)
             hitpoints.text("Hitpoints: " + res[i].hitpoints)
             strength.text("Strength: " + res[i].strength)
-            div.append(img, name,attack, hitpoints, strength, deleteBtn)
-            // $(".charStats").append(img)
-            $(".charStats").append(div)
+            tr.append(img, name,attack, hitpoints, strength, selectBtn, deleteBtn)
+            $(".charTable").append(tr)
 
         }
     })
 })
+
+
 
 

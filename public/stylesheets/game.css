@@ -72,3 +72,26 @@ button {
   font-size: 20px;
   color: rgb(46, 45, 45);
 }
+.board {
+    display: none;
+}
+
+.charTable {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.bigBtn {
+
+    height: 100px;
+    width: 300px;
+    justify-content: center;
+}
+#charCol {
+    display: none;
+}
+#choosePath {
+    padding-left: 20%;
+    padding-top: 4%;
+
+}
