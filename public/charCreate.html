@@ -50,7 +50,7 @@
             <div class="col-md-6">
                 <div class="form">
                     <form>
-                        <div class="form-group">
+                        <div class="form-group chooseType">
                             <label>Choose Character</label>
                             <div class="row">
                                 <div class="col-md-3">
@@ -79,21 +79,27 @@
                                     </button>
 
                                 </div>
+                                <div id="ranking">
+
+                                </div>
 
                             </div>
+                            <button class="btn" id="next-charName">Next</button>
+
                         </div>
-                        <div class="form-group">
+                        <div class="form-group characterName">
                             <label>Create Character Name</label>
                             <input placeholder="Character Name" class="form-control" id="char-name">
+                            <p class="errorAlert">Please Enter a Name to Move Foward</p>
+                            <button class="btn" id="last-charType">Previous</button>
+                            <button class="btn" id="next-charAttack">Next</button>
                         </div>
-                        <div class="form-group form-check">
+                        <div class="form-group form-check chooseAttack">
                             <label>Choose Character Attack</label>
                             <select class="form-control" id="attack">
 
                             </select>
-                        </div>
-                        <div id="ranking">
-
+                            <button class="btn" id="last-charName">Previous</button>
                         </div>
                         <button type="submit" class="btn btn-primary" id="create-btn">Create New Character</button>
                     </form>

@@ -18,3 +18,39 @@ body{
 .btn {
 background-color: rgb(185, 184, 184);
 }
+
+.errorAlert {
+    display: none;
+    background-color: red;
+    opacity: 0.5;
+    color: white;
+}
+
+.chooseType {
+    display: block;
+}
+.characterName {
+    display: none;
+}
+.chooseAttack {
+    display: none;
+}
+#create-btn {
+    display: none;
+}
+#next-charName {
+    display: none;
+}
+#next-charAttack {
+    float: right;
+    margin-top: 25px;
+    display: none;
+}
+#last-charType {
+    display: none;
+    margin-right: 10px;
+}
+#last-charName {
+    display: none;
+    margin-right: 10px;
+}
