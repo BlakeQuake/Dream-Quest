@@ -1,80 +1,74 @@
-body{
-    color: white;
-    font-family: 'MedievalSharp', cursive;
+body {
+  color: white;
+  font-family: "MedievalSharp", cursive;
 }
 .btn {
-    background-color: rgb(185, 184, 184);
-    }
-.currentSpace{
-    border-style:solid ;
-    width:130px;
-    height: 130px;
-    float: left;
-    border-radius:9%;
-    margin:auto;
-    background-color: rgb(22, 68, 22);
-    opacity: 0.8;
+  background-color: rgb(185, 184, 184);
 }
-.header{
-    padding-top: 3%;
+.currentSpace {
+  border-style: solid;
+  width: 130px;
+  height: 130px;
+  float: left;
+  border-radius: 9%;
+  margin: auto;
+  background-color: rgb(17, 58, 17);
+  opacity: 0.8;
 }
-.container{
-    width: 60%;
-align-content: center;
-margin: 0 auto;
+.header {
+  padding-top: 3%;
 }
-.dice{
-    
-    margin-bottom:10%;
-    
+.container {
+  width: 60%;
+  align-content: center;
+  margin: 0 auto;
 }
-
-.modal-title{
-    margin-left: 23%;
-    
+.dice {
+  margin-bottom: 10%;
 }
-.modal-body{
-    
-    color: black;
+#logout {
+  margin-left: 650px;
 }
-.modal-content{
-    background-image: url("../images/26e349c269516d0b99ad9f17e9e2e75b.jpg" );
-    background-position: center;
-    background-size: 160%;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-family: 'MedievalSharp', cursive;
-    font-weight: 100;
-    border-radius:4%;
-    
-    
+.modal-title {
+  margin-left: 23%;
+}
+.modal-body {
+  color: black;
+}
+.modal-content {
+  background-image: url("../images/26e349c269516d0b99ad9f17e9e2e75b.jpg");
+  background-position: center;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+  font-weight: 100;
+  border-radius: 4%;
 }
 .charStats {
-    cursor: pointer;
+  cursor: pointer;
 }
 .type:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
-li{
-    font-size:20px;
+li {
+  font-size: 20px;
 }
-#acceptBtn{
-    border-style: outset;
-    font-size: 20px;
-    color: rgb(46, 45, 45);
-    
-    
+#acceptBtn {
+  border-style: outset;
+  font-size: 20px;
+  color: rgb(46, 45, 45);
 }
 #videoBG {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index:-1;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
-button{
-    border-style: outset;
-    font-size: 20px;
-    color: rgb(46, 45, 45);    
+button {
+  border-style: outset;
+  font-size: 20px;
+  color: rgb(46, 45, 45);
 }
