@@ -43,12 +43,12 @@ $('.play').on("click", function(){
             tr.attr("style", "font-size: 14px")
             tr.attr("data-type", res[i].type)
             
-            deleteBtn.attr("class", "deleteBtn")
+            deleteBtn.attr("class", "deleteBtn btn")
             deleteBtn.attr("data-id", res[i].id)
             deleteBtn.attr("style", "background-color: red;")
             deleteBtn.html("Delete")
 
-            selectBtn.attr("class", "selectBtn")
+            selectBtn.attr("class", "selectBtn btn")
             selectBtn.attr("data-id", res[i].id)
             selectBtn.attr("style", "background-color: green;")
             selectBtn.html("Select")
