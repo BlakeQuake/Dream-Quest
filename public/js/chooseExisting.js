@@ -1,4 +1,4 @@
-$('.play').on("click", function(){
+$('.play').on("click", function () {
     $("#choosePath").attr("style", "display: none")
     $("#charCol").attr("style", "display: block")
 
@@ -6,9 +6,9 @@ $('.play').on("click", function(){
     $.ajax({
         url: "api/characters/id",
         method: "GET"
-    }).then(function(res){
+    }).then(function (res) {
 
-        for (let i = 0; i < res.length; i++){
+        for (let i = 0; i < res.length; i++) {
             console.log(res[i])
             const tr = $("<tr>")
             const name = $("<td>")
@@ -20,20 +20,20 @@ $('.play').on("click", function(){
             let img;
 
 
-            if (res[i].type === "magic"){
-                 img = $("<img src = '../images/magic.png' height = '50px' width = '60px'>")
+            if (res[i].type === "magic") {
+                img = $("<img src = '../images/magic.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "stealer"){
-                 img = $("<img src = '../images/stealer.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "stealer") {
+                img = $("<img src = '../images/stealer.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "bowman"){
-                 img = $("<img src = '../images/bowman.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "bowman") {
+                img = $("<img src = '../images/bowman.png' height = '50px' width = '60px'>")
 
             }
-            else{
-                 img = $("<img src = '../images/warrior.png' height = '50px' width = '60px'>")
+            else {
+                img = $("<img src = '../images/warrior.png' height = '50px' width = '60px'>")
 
             }
 
@@ -42,7 +42,7 @@ $('.play').on("click", function(){
             tr.attr("id", `type${i}`)
             tr.attr("style", "font-size: 14px")
             tr.attr("data-type", res[i].type)
-            
+
             deleteBtn.attr("class", "deleteBtn btn")
             deleteBtn.attr("data-id", res[i].id)
             deleteBtn.attr("style", "background-color: red;")
@@ -53,11 +53,11 @@ $('.play').on("click", function(){
             selectBtn.attr("style", "background-color: green;")
             selectBtn.html("Select")
 
-            name.text("Name: " + res[i].name)
-            attack.text("Attack: " + res[i].attack)
-            hitpoints.text("Hitpoints: " + res[i].hitpoints)
-            strength.text("Strength: " + res[i].strength)
-            tr.append(img, name,attack, hitpoints, strength, selectBtn, deleteBtn)
+            name.text(res[i].name)
+            attack.text(res[i].attack)
+            hitpoints.text(res[i].hitpoints)
+            strength.text(res[i].strength)
+            tr.append(img, name, attack, hitpoints, strength, selectBtn, deleteBtn)
             $(".charTable").append(tr)
 
         }
