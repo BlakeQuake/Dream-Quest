@@ -1,6 +1,6 @@
 $('.play').on("click", function(){
     $("#choosePath").attr("style", "display: none")
-    $("#charCol").attr("style", "display: block;")
+    $("#charCol").attr("style", "display: block")
 
     $(".charStats").empty()
     $.ajax({

@@ -26,9 +26,7 @@ body {
 .dice {
   margin-bottom: 10%;
 }
-/* #logout {
-  margin-left: 650px;
-} */
+
 .modal-title {
   margin-left: 23%;
 }
@@ -44,9 +42,6 @@ body {
   font-family: "MedievalSharp", cursive;
   font-weight: 100;
   border-radius: 4%;
-}
-.charStats {
-  cursor: pointer;
 }
 .type:hover {
   background-color: lightgray;
@@ -89,6 +84,10 @@ button {
 }
 #charCol {
     display: none;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
 }
 #choosePath {
     padding-left: 20%;
