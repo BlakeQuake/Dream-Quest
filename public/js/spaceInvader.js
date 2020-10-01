@@ -13,7 +13,7 @@ function Hero() {
         this.xdir = dir
     }
 
-    this.move = function(dir) {
+    this.move = function() {
         this.x += this.xdir
     }
 
@@ -28,9 +28,7 @@ function Villian(x, y) {
 
     this.shiftDown = function() {
         this.xdir *= -1;
-        console.log(this.y + "   " + height)
         this.y += this.radius
-        console.log(this.y)
 
     }
 

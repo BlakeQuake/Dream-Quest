@@ -22,11 +22,22 @@ function draw() {
         shots[i].show()
         for (var j = 0; j < villians.length; j++) {
             if (shots[i].hits(villians[j])) {
-                // console.log("Ouch")
                 shots.splice(i, 1)
                 villians.splice(j, 1)
+
+                console.log(villians[i].y)
+                console.log(windowHeight)
+
                 return
 
+            }
+            if (villians.length === 0) {
+                alert("WINNER")
+                
+            }
+            else if (villians[i].y >= windowHeight) {
+                alert("you lose")
+                
             }
         }
 
@@ -79,4 +90,9 @@ function keyPressed() {
         hero.setDir(-10)
     }
 }
+
+
+
+
+
 
