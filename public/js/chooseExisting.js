@@ -1,56 +1,69 @@
-$('.dropdown').on("click", function(){
+$('.play').on("click", function () {
+    $("#choosePath").attr("style", "display: none")
+    $("#charCol").attr("style", "display: block")
 
     $(".charStats").empty()
     $.ajax({
         url: "api/characters/id",
         method: "GET"
-    }).then(function(res){
+    }).then(function (res) {
 
-        for (let i = 0; i < res.length; i++){
+        for (let i = 0; i < res.length; i++) {
             console.log(res[i])
-            const div = $("<div>")
-            const name = $("<p>")
-            const hitpoints = $("<p>")
-            const strength = $("<p>")
+            const tr = $("<tr>")
+            const name = $("<td>")
+            const hitpoints = $("<td>")
+            const strength = $("<td>")
             const deleteBtn = $("<button>")
-            const attack = $("<p>")
+            const selectBtn = $("<button>")
+            const attack = $("<td>")
             let img;
 
 
-            if (res[i].type === "magic"){
-                 img = $("<img src = '../images/magic.png' height = '50px' width = '60px'>")
+            if (res[i].type === "magic") {
+                img = $("<img src = '../images/magic.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "stealer"){
-                 img = $("<img src = '../images/stealer.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "stealer") {
+                img = $("<img src = '../images/stealer.png' height = '50px' width = '60px'>")
 
             }
-            else if (res[i].type === "bowman"){
-                 img = $("<img src = '../images/bowman.png' height = '50px' width = '60px'>")
+            else if (res[i].type === "bowman") {
+                img = $("<img src = '../images/bowman.png' height = '50px' width = '60px'>")
 
             }
-            else{
-                 img = $("<img src = '../images/warrior.png' height = '50px' width = '60px'>")
+            else {
+                img = $("<img src = '../images/warrior.png' height = '50px' width = '60px'>")
 
             }
 
 
-            div.attr("class", "type")
-            div.attr("style", "font-size: 14px")
-            div.attr("data-type", res[i].type)
-            deleteBtn.attr("class", "deleteBtn")
+            tr.attr("class", `type`)
+            tr.attr("id", `type${i}`)
+            tr.attr("style", "font-size: 14px")
+            tr.attr("data-type", res[i].type)
+
+            deleteBtn.attr("class", "deleteBtn btn")
             deleteBtn.attr("data-id", res[i].id)
-            name.text("Name: " + res[i].name)
+            deleteBtn.attr("style", "background-color: red;")
             deleteBtn.html("Delete")
-            attack.text("Attack: " + res[i].attack)
-            hitpoints.text("Hitpoints: " + res[i].hitpoints)
-            strength.text("Strength: " + res[i].strength)
-            div.append(img, name,attack, hitpoints, strength, deleteBtn)
-            // $(".charStats").append(img)
-            $(".charStats").append(div)
+
+            selectBtn.attr("class", "selectBtn btn")
+            selectBtn.attr("data-id", res[i].id)
+            selectBtn.attr("style", "background-color: green;")
+            selectBtn.html("Select")
+
+            name.text(res[i].name)
+            attack.text(res[i].attack)
+            hitpoints.text(res[i].hitpoints)
+            strength.text(res[i].strength)
+            tr.append(img, name, attack, hitpoints, strength, selectBtn, deleteBtn)
+            $(".charTable").append(tr)
 
         }
     })
 })
+
+
 
 

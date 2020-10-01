@@ -48,9 +48,6 @@
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel"><img src="./images/dreamquestwide.png" alt="" width="240px"
               height="80px"></h5>
-          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> Accept Quest
-          <span aria-hidden="true">&times;</span>
-        </button> -->
         </div>
         <div class="modal-body">
           <h3>Rules</h3>
@@ -77,11 +74,42 @@
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade pauseModal" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel"><img src="./images/dreamquestwide.png" alt="" width="240px"
+              height="80px"></h5>
+        </div>
+        <div class="modal-body">
+          <h3>Pause</h3>
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="quit">Quit Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout" id="logout">Logout</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" data-dismiss="modal" style="background-color: rgb(221, 217, 217)" id="closePause">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  ​
   ​
   ​
   ​
   <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgb(218, 218, 218)">
-    <a class="navbar-brand" href="/"><img src="./images/dreamquestwide.png" alt="DQLogo" height="60px"
+    <a class="navbar-brand" href="#"><img src="./images/dreamquestwide.png" alt="DQLogo" height="60px"
         width="200px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,78 +117,104 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-
-        <li class="nav-item">
-          <a class="nav-link" href="/createCharacters">Create</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Choose Character </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <div class=" charStats">
-
-            </div>
-          </div>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="/logout" id="logout">Logout</a>
-        </li>
+      </li>
+
+
+      </ul>
 
     </div>
 
-    </ul>
     </div>
   </nav>
 
-  <h1 style="text-align: center" class="header">Quest</h1>
+  <div class="container" id="choosePath">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="bigBtn btn"><a href="/createCharacters">Create A Character</a></button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="bigBtn btn play" style="margin-top: 30px;"><a href="#">Play</a></button>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
+    <div id="charCol">
+      <div class="row">
+        <div class="col-md-12">
+          <table style="width:100%" class="charTable">
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>Attack</th>
+              <th>Hitpoints</th>
+              <th>Strength</th>
+            </tr>
 
 
-    <h1 id="count"></h1>
-    <button class="start" class="btn">Begin</button>
-    <br>
-    <br>
-    <button class="dice" class="btn">Roll</button>
+          </table>
+          <button class="btn" style="margin-top: 25px;"><a href="/game">Back</a></button>
+        </div>
+      </div>
 
-    <div class="row firstRow">
-      <div class="col-md-2 currentSpace" data-space="0"></div>
-      <div class="col-md-2 currentSpace" data-space="1"></div>
-      <div class="col-md-2 currentSpace" data-space="2"></div>
-      <div class="col-md-2 currentSpace" data-space="3"></div>
-      <div class="col-md-2 currentSpace" data-space="4"></div>
-      <div class="col-md-2 currentSpace" data-space="5"></div>
     </div>
-    <div class="row secondRow">
-      <div class="col-md-2 currentSpace" data-space="6"></div>
-      <div class="col-md-2 currentSpace" data-space="7"></div>
-      <div class="col-md-2 currentSpace" data-space="8"></div>
-      <div class="col-md-2 currentSpace" data-space="9"></div>
-      <div class="col-md-2 currentSpace" data-space="10"></div>
-      <div class="col-md-2 currentSpace" data-space="11"></div>
-    </div>
-    <div class="row thirdRow">
-      <div class="col-md-2 currentSpace" data-space="12"></div>
-      <div class="col-md-2 currentSpace" data-space="13"></div>
-      <div class="col-md-2 currentSpace" data-space="14"></div>
-      <div class="col-md-2 currentSpace" data-space="15"></div>
-      <div class="col-md-2 currentSpace" data-space="16"></div>
-      <div class="col-md-2 currentSpace" data-space="17"></div>
-    </div>
-    <div class="row fourthRow">
-      <div class="col-md-2 currentSpace" data-space="18"></div>
-      <div class="col-md-2 currentSpace" data-space="19"></div>
-      <div class="col-md-2 currentSpace" data-space="20"></div>
-      <div class="col-md-2 currentSpace" data-space="21"></div>
-      <div class="col-md-2 currentSpace" data-space="22"></div>
-      <div class="col-md-2 currentSpace" data-space="23"></div>
+
+    <div class="board">
+      <h1 id="count"></h1>
+      <button class="dice" class="btn">Roll</button>
+      <button id="pause">Pause</button>
+
+      <div class="row displayStats" >
+
+
+      </div>
+
+      <div class="row firstRow">
+        <div class="col-md-2 currentSpace" data-space="0"></div>
+        <div class="col-md-2 currentSpace" data-space="1"></div>
+        <div class="col-md-2 currentSpace" data-space="2"></div>
+        <div class="col-md-2 currentSpace" data-space="3"></div>
+        <div class="col-md-2 currentSpace" data-space="4"></div>
+        <div class="col-md-2 currentSpace" data-space="5"></div>
+      </div>
+      <div class="row secondRow">
+        <div class="col-md-2 currentSpace" data-space="6"></div>
+        <div class="col-md-2 currentSpace" data-space="7"></div>
+        <div class="col-md-2 currentSpace" data-space="8"></div>
+        <div class="col-md-2 currentSpace" data-space="9"></div>
+        <div class="col-md-2 currentSpace" data-space="10"></div>
+        <div class="col-md-2 currentSpace" data-space="11"></div>
+      </div>
+      <div class="row thirdRow">
+        <div class="col-md-2 currentSpace" data-space="12"></div>
+        <div class="col-md-2 currentSpace" data-space="13"></div>
+        <div class="col-md-2 currentSpace" data-space="14"></div>
+        <div class="col-md-2 currentSpace" data-space="15"></div>
+        <div class="col-md-2 currentSpace" data-space="16"></div>
+        <div class="col-md-2 currentSpace" data-space="17"></div>
+      </div>
+      <div class="row fourthRow">
+        <div class="col-md-2 currentSpace" data-space="18"></div>
+        <div class="col-md-2 currentSpace" data-space="19"></div>
+        <div class="col-md-2 currentSpace" data-space="20"></div>
+        <div class="col-md-2 currentSpace" data-space="21"></div>
+        <div class="col-md-2 currentSpace" data-space="22"></div>
+        <div class="col-md-2 currentSpace" data-space="23"></div>
+      </div>
     </div>
   </div>
 
   <script src="js/changeStats.js"></script>
   <script src="js/chooseExisting.js"></script>
   <script src="js/delete.js"></script>
+  <script src="js/pause.js"></script>
   <script src="js/game.js"></script>
+  <script src="js/displayStats.js"></script>
+
 
 </body>
 

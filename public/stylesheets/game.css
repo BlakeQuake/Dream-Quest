@@ -26,9 +26,7 @@ body {
 .dice {
   margin-bottom: 10%;
 }
-#logout {
-  margin-left: 650px;
-}
+
 .modal-title {
   margin-left: 23%;
 }
@@ -44,9 +42,6 @@ body {
   font-family: "MedievalSharp", cursive;
   font-weight: 100;
   border-radius: 4%;
-}
-.charStats {
-  cursor: pointer;
 }
 .type:hover {
   background-color: lightgray;
@@ -71,4 +66,35 @@ button {
   border-style: outset;
   font-size: 20px;
   color: rgb(46, 45, 45);
+}
+.board {
+    display: none;
+}
+
+.charTable {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.bigBtn {
+
+    height: 100px;
+    width: 300px;
+    justify-content: center;
+}
+#charCol {
+    display: none;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+#choosePath {
+    padding-left: 20%;
+    padding-top: 4%;
+
+}
+.displayStats {
+  background-color: white;
+  color: black;
 }
