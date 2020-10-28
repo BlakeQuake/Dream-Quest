@@ -1,4 +1,6 @@
 # Dream-Quest
+## Description A Javascript adventure game where users can create their own characters and take them through a quest that features minigames, riddles, and tons of other fun. Are you prepared to take the Quest??
+
 ## Usage
 You must login/signup then choose or create a character then roll a die to move your character, win enough mini games to beat the boss
 ## Installation
@@ -23,5 +25,4 @@ To run tests, run the following command:
  * [License](#License)
  * [Tests](#Tests)
  * [Question](#Question)
-## Description
-This is a quest roleplaying board game with fun mini games for you and whole family. One player game
+
