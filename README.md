@@ -1,5 +1,6 @@
 # Dream-Quest
-## Description 
+
+## description 
 A Javascript adventure game where users can create their own characters and take them through a quest that features minigames, riddles, and tons of other fun. Are you prepared to take the Quest??
 
 ## Usage
